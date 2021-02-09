@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar  class="head" text-center>
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+   <img src="../assets/img/logo.png" class="logo"/>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <ion-card>
+    <img src="../assets/img/manwatch.jpg" class="card-size"/>
+    <div class="card-btn">
+            <ion-button class="card-text" routerLink="/allvideos" shape="round">
+              All video
+            </ion-button>
+    </div>
+  </ion-card>
+  <ion-card *ngFor="let category of categories">
+    <img [src]="category.img_src" class="card-size"/>
+    <div class="card-btn">
+            <ion-button class="card-text" [routerLink]="['/video/' + category.id + '/' + category.name]" shape="round">
+             {{category.name}}
+            </ion-button>
+    </div>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,324 @@
+// http://ionicframework.com/docs/theming/
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-style: normal;
+  src: url("src/assets/fonts/montserrat/Montserrat-Regular.otf");
+}
+
+// .allVideo.card-background-page{
+//   ion-card:before {
+//     content: "";
+//   background-color: rgba(0, 0, 0, 0.5);
+//   position: absolute;
+//   height: 100%;
+
+//   width: 100%;
+
+//   }
+//   ion-card:hover:before {
+//     background-color: rgba(0, 0, 0, 0);
+//   }
+// ion-card:hover {
+
+//   .card-add{
+//       display: inline-block;
+//   }
+//   .card-play{
+//       display: inline-block;
+//   }
+//   .card-text{
+//       display: inline-block;
+//   }
+//   .card-title{
+//       display: inline-block;
+//   }
+//   .card-time{
+//       display: inline-block;
+//   }
+//   .card-star{
+//     display: inline-block;
+//   }
+// }
+
+//}
+ion-fab-button {
+  --background: #000;
+  --background-focused: #000;
+  --background-activated: #000;
+}
+
+.active {
+  --ion-text-color: var(--ion-color-primary);
+  --background: #cead65 !important;
+  ion-icon {
+    --ion-text-color-rgb: var(--ion-color-primary);
+  }
+}
+
+.button-solid {
+  font-weight: bolder;
+  --box-shadow: 0px 0px 4px 2px #5d5e5e;
+  --opacity: 75%;
+  --background-activated: rgba(255, 255, 255, 0.7);
+  --background-focused: rgba(255, 255, 255, 0.7);
+}
+
+.header-md:after {
+  bottom: 0px;
+  height: 0px;
+  border-color: #7b7c7c;
+}
+
+.title-ios {
+  padding-inline-start: 18px;
+  padding-inline-end: 0px;
+  text-align: left;
+}
+
+.hr {
+  height: 0.5px;
+  background: #7b7c7c;
+}
+
+.tool {
+  --background: #5d5e5e;
+  --color: #fff;
+  --background-activated: #cead65;
+  --border-color: #7b7c7c;
+  --min-height: 50px;
+}
+
+ion-item {
+  --min-height: 30px;
+}
+
+.card-size {
+  height: 150px;
+  //object-fit: cover !important;
+  //width: 100% !important;
+}
+
+.logo {
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.menu-spc {
+  margin-left: 60px;
+}
+
+.menu-hdr {
+  margin-left: 30px;
+}
+
+.clr {
+  --background: #5d5e5e;
+  --color: #fff;
+  --background-activated: #cead65;
+  --border-color: #7b7c7c;
+}
+
+.head {
+  --background: #5d5e5e;
+  --color: #fff;
+  --background-activated: #cead65;
+  --border-color: #7b7c7c;
+  height: 65px;
+}
+
+.text {
+  height: 40px;
+  background-color: #cead65;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.card-background-page {
+  
+  ion-slides {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 150px;
+    border-radius: 0;
+    background: #5d5e5e;
+  }
+
+  .card-btn {
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    width: 100%;
+    //color: rgba(255,255,255,0.7);
+    //box-shadow: #5d5e5e;
+    //opacity: 75%;
+    //--background-color: rgba(255,255,255,0.7);
+
+    .card-text {
+      color: black;
+      font-weight: bolder;
+      --box-shadow: 0px 0px 4px 2px #5d5e5e;
+      --opacity: 75%;
+      --background: rgba(255, 255, 255, 0.7);
+      text-transform: none;
+      --color-activated: black;
+      --color-focused: black;
+    }
+  }
+
+  .card-title {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.65em;
+    width: 80%;
+    padding: 0px;
+    text-align: left;
+    color: #ffffff;
+    margin-left: 0px;
+    text-transform: uppercase;
+    z-index: 9;
+    left: 15px;
+    //display: none;
+  }
+
+  .card-star {
+    font-size: 1em;
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    //display: none;
+
+    .btn-unfav {
+      margin: 0px;
+      padding: 0px;
+      --background: #fff;
+      --border-radius: 0;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
+      .notFav {
+        height: 35px;
+        width: 25px;
+        //--color: #cead65;
+        //background: #cead65;
+      }
+    }
+
+    .btn-fav {
+      margin: 0px;
+      padding: 0px;
+      --background: #cead65;
+      --border-radius: 0;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
+    }
+    .fav {
+      height: 30px;
+      width: 25px;
+    }
+  }
+
+  .card-add {
+    font-size: 1em;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0px;
+    //display: none;
+
+    .fab {
+      padding: 0px;
+      margin: 0px;
+      color: #fff;
+    }
+
+    .share {
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  .card-time {
+    font-size: 1em;
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    text-align: right;
+    width: 100%;
+    color: #fff;
+    //display: none;
+  }
+
+  .card-play {
+    font-size: 1em;
+    position: absolute;
+    top: 37%;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    //display: none;
+
+    .video {
+      height: 35px;
+      width: 35px;
+    }
+  }
+}
+.hidden-content {
+  .card-star,
+  .card-play,
+  .card-time,
+  .card-title,
+  .card-add {
+    display: none;
+  }
+}
+.slide-height {
+  max-height: 200px !important;
+}
+.slide {
+  height: 100% !important;
+  //width: 60;
+}
+
+.swiper-slide .swiper-slide-active .card-size {
+  -webkit-filter: grayscale(0%) !important; /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%) !important;
+}
+.grey {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+ion-slide.swiper-slide {
+  align-items: flex-start;
+}
+ion-slides.slides{
+  height: auto;
+}
+.swiper-pagination {
+  bottom: 0px;
+}
+
+.swiper-slide img{
+  width: 100%;
+  object-fit: cover;
+}

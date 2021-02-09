@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar class="head" text-center>
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <img src="../assets/img/logo.png" class="logo" />
+  </ion-toolbar>
+  <ion-title class="text" mode="md">
+    ALL VIDEOS
+  </ion-title>
+</ion-header>
+
+<ion-content class="card-background-page clr">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-slides *ngIf="videos" class="slide home_slider" #Slides_banner [options]="SlideOption" scrollbar=false (ionSlideDidChange)="slideChanged($event.target)" >
+      <ion-slide *ngFor="let v of videos; let i=index;" class="slide-height {{ i == 0 ? '' : 'hidden-content'}}"  data-id="{{'slides_'+i}}" (click)="clickFunction(i)">
+            <img *ngIf="v.img_src" [src]="[v.img_src]" class="card-size {{ i == 0 ? '' : 'grey'}}"   />
+            
+            <div class="card-title">{{v.name}} <br>{{v.desc}}</div>
+        
+            <div *ngIf="!v.isFavorite" class="card-star" (click)="addtofav(v.id, i)">
+              <ion-button class="btn-unfav">
+                <img src="../assets/icon/fav-icon.png" class="notFav" />
+              </ion-button>
+            </div>
+        
+            <div class="card-star">
+              <ion-button *ngIf="v.isFavorite" class="btn-fav" (click)="unFav(v.id,i)">
+                <img src="../assets/icon/hand-copy.png" class="fav" />
+                <!-- {{myimage}}" (click)="addEvent();" -->
+              </ion-button>
+            </div>
+        
+            <div class="card-add">
+              <ion-fab vertical="top" horizontal="start" slot="fixed" class="fab">
+                <ion-fab-button size="small" class="fab" (click)="sharePicker()">
+                  <!-- <img src="../assets/icon/share.png" class="share" /> -->
+                  <ion-icon name="share" class="share" mode="md"></ion-icon>
+                </ion-fab-button>
+              </ion-fab>
+            </div>
+        
+            <div class="card-play">
+              <ion-button (click)="start(v.vid_src)" fill="clear">
+                <img src="../assets/icon/video.png" class="video" />
+              </ion-button>
+            </div>
+        
+            <div class="card-time">
+              <ion-badge color="transparent">{{v.vidDuration}}</ion-badge>
+            </div>
+      </ion-slide>
+
+  </ion-slides>
+  <!-- <div *ngIf="!videos" class="no_video_div">
+    <p>No Videos Found.</p>
+  </div> -->
+
+
+</ion-content>

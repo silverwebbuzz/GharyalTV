@@ -1,0 +1,53 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu>
+      <ion-header>
+        <ion-toolbar class="tool">
+          <ion-title class="menu-hdr">CHANNELS</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="clr">
+        <div class="hr"></div>
+        <ion-list no-padding>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item [routerDirection]="'root'" routerLink="/home" routerLinkActive="active" class="clr" lines="none" mode="md">
+              <ion-label class="menu-spc">
+                HOME
+              </ion-label>
+            </ion-item>
+            <div *ngFor="let page of appPages">
+              <ion-item [routerDirection]="'root'" routerLinkActive="active" [routerLink]="[page.url]" class="clr" lines="none" mode="md">
+                <ion-label class="menu-spc">
+                  {{page.title | uppercase}}
+                </ion-label>
+              </ion-item>
+            </div>
+            <ion-item [routerDirection]="'root'" routerLinkActive="active" routerLink="/allvideos" class="clr" lines="full" mode="md">
+              <ion-label class="menu-spc">
+                ALL VIDEOS
+              </ion-label>
+            </ion-item>
+            <ion-item [routerDirection]="'root'" routerLinkActive="active" routerLink="/favorites" class="clr" lines="full" mode="md">
+              <img src="../assets/icon/hand-copy.png" height="25px;" />
+              <ion-label>
+                &nbsp;
+                FAVORITES
+              </ion-label>
+            </ion-item>
+            <ion-item [routerDirection]="'root'" class="clr" lines="full" mode="md">
+              <ion-icon name="star" color="white"></ion-icon>
+              <ion-label>
+                &nbsp;
+                RATE APPLICATION
+              </ion-label>
+            </ion-item>
+            <ion-item [routerDirection]="'root'" class="clr" lines="full" mode="md">
+              <img src="../assets/img/logo.png" class="logo" />
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

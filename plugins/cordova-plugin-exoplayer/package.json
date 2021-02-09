@@ -1,0 +1,69 @@
+{
+  "_from": "cordova-plugin-exoplayer@^2.5.4",
+  "_id": "cordova-plugin-exoplayer@2.5.4",
+  "_inBundle": false,
+  "_integrity": "sha512-aw6mBJN+sBV3DvI2ZB/aNYvjVy6GAZH9ALojNohPFXo9hJo5wvlh5AoD6doY8QCe9tDyoZs8A+gjYskGZAIszw==",
+  "_location": "/cordova-plugin-exoplayer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "cordova-plugin-exoplayer@^2.5.4",
+    "name": "cordova-plugin-exoplayer",
+    "escapedName": "cordova-plugin-exoplayer",
+    "rawSpec": "^2.5.4",
+    "saveSpec": null,
+    "fetchSpec": "^2.5.4"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-exoplayer/-/cordova-plugin-exoplayer-2.5.4.tgz",
+  "_shasum": "b7d472db4dd49414b71fca4e165174f9f36a5a23",
+  "_spec": "cordova-plugin-exoplayer@^2.5.4",
+  "_where": "/Users/silverwebbuzz/Documents/MD/ionicProject/final-gharyal-tv",
+  "author": {
+    "name": "Nedim Cholich"
+  },
+  "bugs": {
+    "url": "https://github.com/frontyard/cordova-plugin-exoplayer/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-exoplayer",
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "Media player for Cordova using Google's ExoPlayer framework",
+  "devDependencies": {
+    "jshint": "^2.9.0"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=4.0.0"
+    }
+  ],
+  "homepage": "https://github.com/frontyard/cordova-plugin-exoplayer#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "phonegap",
+    "cordova",
+    "ionic",
+    "android",
+    "exoplayer",
+    "exo",
+    "video",
+    "player"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-exoplayer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontyard/cordova-plugin-exoplayer.git"
+  },
+  "version": "2.5.4"
+}

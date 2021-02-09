@@ -1,0 +1,8 @@
+{
+  "name": "gharyaltv",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}
